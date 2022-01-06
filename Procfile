@@ -1,0 +1,1 @@
+web: gunicorn --chdir app chuck_consumer.wsgi:application --log-file -

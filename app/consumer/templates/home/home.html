@@ -16,7 +16,7 @@
 <body>
     <header class="flex flex-center justify-space-between">
         <img src="{% static 'home/images/chuck_logo.png' %}" class="logo">
-        <p>Chuck Norris Api Consumer</p>
+        <p>Chuck Norris Jokes</p>
     </header>
 
     <section class="section">
@@ -24,11 +24,12 @@
         {% for category in categories %}
         <div class="card category-card">
             <div class="flex flex-center justify-space-between category" onclick="getContent('{{category}}')">
-                <p>{{category}}</p>
-                <i class="fas fa-angle-down"></i>
+                <p class="category-title">{{category}}</p>
+                <i class="fas fa-angle-down fa-2x" onclick="closeJokesContainer(event, '{{category}}')"></i>
             </div>
+            <i class="fas fa-2x fa-circle-notch fa-spin hidden"></i>
+            <div class="category-content" id="{{category}}-contentContainer"></div>
         </div>
-        <div class="category-content" id="{{category}}-contentContainer"></div>
         {% endfor %}
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"

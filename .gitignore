@@ -1,1 +1,12 @@
-.env
+.vscode
+*pycache*
+*env*
+*pycache*
+htmlcov/
+*.coverage*
+coverage.xml
+*.cover
+*.editorconfig*
+*.tmp*
+*staticfiles*
+.txt

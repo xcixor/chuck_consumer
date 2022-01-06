@@ -1,0 +1,41 @@
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+.flex {
+    display: flex;
+}
+
+.logo {
+    max-height: 80px;
+    max-width: 80px;
+    padding: 10px;
+    border: 0.05em solid #e6e6e6;
+}
+
+header {
+    font-size: 0.8rem;
+}
+
+.flex-center {
+    align-items: center;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.category-card {
+    margin-bottom: 20px;
+}
+
+.card {
+    -webkit-box-shadow: 0px 0px 8px -2px #c6e39f;
+    box-shadow: 0px 0px 8px -2px #c6e39f;
+}
+
+@media (min-width: 992px) {
+    body {
+        padding: 2% 15%;
+    }
+}

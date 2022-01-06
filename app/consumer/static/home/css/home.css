@@ -1,3 +1,6 @@
+p {
+    margin: 0;
+}
 body {
     font-family: 'Rubik', sans-serif;
 }
@@ -27,6 +30,7 @@ header {
 
 .category-card {
     margin-bottom: 20px;
+    padding: 20px;
 }
 
 .card {
@@ -34,8 +38,41 @@ header {
     box-shadow: 0px 0px 8px -2px #c6e39f;
 }
 
+.card:hover, .btn:hover{
+    -webkit-box-shadow: 0px 0px 8px -2px #8dbadd;
+    box-shadow: 0px 0px 8px -2px #8dbadd;
+}
+
+.fa-angle-down:hover, fa-angle-up:hover{
+    color: #c6e39f;
+}
+
 .category-card {
     cursor: pointer;
+    position: relative;
+}
+
+.fa-circle-notch {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+}
+
+.hidden {
+    display: none;
+}
+
+.category-title {
+    text-transform: capitalize;
+}
+
+.loading {
+    pointer-events: none;
+    color: #707070;
+}
+
+.right-container {
+    padding: 10px;
 }
 
 @media (min-width: 992px) {

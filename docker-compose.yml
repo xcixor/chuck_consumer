@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  chuck-consumer:
+    build:
+      context: .
+    volumes:
+      - ./app/:/usr/src/app/
+    ports:
+      - 8000:8000
+    environment:
+      SECRET_KEY: 'secret-key'
+      DJANGO_SETTINGS_MODULE: chuck_consumer.settings.development

@@ -18,7 +18,8 @@ jobs:
             DJANGO_SETTINGS_MODULE: chuck_consumer.settings.production
           command: |
             cd app
-            pipenv run coverage run manage.py test
+            pipenv run python manage.py collectstatic
+            pipenv run python manage.py test
 workflows:
   version: 2
   test-application:

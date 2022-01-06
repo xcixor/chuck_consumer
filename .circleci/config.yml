@@ -1,0 +1,26 @@
+version: 2.1
+jobs:
+  test:
+    working_directory: ~/rapid
+    docker:
+      - image: circleci/python:3.9-buster-browsers-legacy
+    steps:
+      - checkout
+      - run:
+          name: Set up environment
+          command: |
+            sudo pip install pipenv
+            pipenv install
+      - run:
+          name: Run Tests
+          environment:
+            SECRET_KEY: 'secret-key'
+            DJANGO_SETTINGS_MODULE: chuck_consumer.settings.production
+          command: |
+            cd app
+            pipenv run coverage run manage.py test
+workflows:
+  version: 2
+  test-application:
+    jobs:
+      - test
